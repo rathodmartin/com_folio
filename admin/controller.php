@@ -7,7 +7,7 @@ class FolioController extends JControllerLegacy
 	
 	public function display($cachable = false, $urlparams = false)
 	{
-		require_once JPATH_COMPONENT.'/helpers/folio.php';
+	/*	require_once JPATH_COMPONENT.'/helpers/folio.php'; */
 		
 		$view	= $this->input->get('view', 'folios');
 		$layout	= $this->input->get('layout', 'default');

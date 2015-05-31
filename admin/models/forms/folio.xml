@@ -13,6 +13,18 @@
 		<field name="alias" type="text" class="inputbox"
 			size="40" label="JFIELD_ALIAS_LABEL"
 			description="COM_FOLIO_FIELD_ALIAS_DESC" />
+			
+		<field
+			name="catid"
+			type="category"
+			extension="com_folio"
+			class="inputbox"
+			default=""
+			label="COM_FOLIO_FIELD_CATID_LABEL"
+			description="COM_FOLIO_FIELD_CATID_DESC"
+			>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
 		
 	</fieldset>
 </form>

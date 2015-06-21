@@ -11,7 +11,9 @@ class FolioModelFolios extends JModelList
 					'id', 'a.id', 
 					'title', 'a.title',
 					'state', 'a.state',
-					'company', 'a.company'
+					'company', 'a.company',
+					'publish_up', 'a.publish_up',
+					'publish_down', 'a.piublish_down'
 			);
 		}
 		
@@ -32,14 +34,15 @@ class FolioModelFolios extends JModelList
 				$this->getState(
 						'list.select', 
 						'a.id, a.title,' .
-						'a.state, a.company'
+						'a.state, a.company' .
+						'a.publish_up, a.publish_down'
 				)
 		);
 		$query->from($db->quoteName('#__folio').' AS a');
 		
 		$orderCol = $this->state->get('list.ordering');
 		$orderDirn = $this->state->get('list.direction');
-		$query->oder($db->escapae($orderCol.' '.$orderDirn));
+		$query->order($db->escape($orderCol.' '.$orderDirn));
 		
 		return $query;
 	}

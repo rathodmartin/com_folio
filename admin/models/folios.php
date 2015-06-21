@@ -18,6 +18,11 @@ class FolioModelFolios extends JModelList
 		parent::__construct($config);
 	}
 	
+	protected function populateState($ordering = null, $direction = null)
+	{
+		parent::populateState('a.title', 'asc');
+	}
+	
 	protected function getListQuery()
 	{
 		$db		= $this->getDbo();
@@ -31,6 +36,10 @@ class FolioModelFolios extends JModelList
 				)
 		);
 		$query->from($db->quoteName('#__folio').' AS a');
+		
+		$orderCol = $this->state->get('list.ordering');
+		$orderDirn = $this->state->get('list.direction');
+		$query->oder($db->escapae($orderCol.' '.$orderDirn));
 		
 		return $query;
 	}

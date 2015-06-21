@@ -1,13 +1,6 @@
 <?php
 defined('_JEXEC') or die;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 628eb3b3f63dbfa7dcd6e1debe63051f326fa154
->>>>>>> 2df3818cd08a4e607f40a4c79d3d436e90ae459c
 class FolioTableFolio extends JTable
 {
 	public function __construct(&$db)
@@ -24,15 +17,11 @@ class FolioTableFolio extends JTable
 	{
 		return parent::store($updateNulls);
 	}
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-	
+
 	public function publish($pks = null, $state = 1, $userId = 0)
 	{
 		$k = $this->tbl_key;
-		
+	
 		JArrayHelper::toInteger($pks);
 		$state = (int) $state;
 		
@@ -72,11 +61,7 @@ class FolioTableFolio extends JTable
 		}
 		
 		$this->setError('');
-		
+	
 		return true;
 	}
 }
-=======
-}
->>>>>>> 628eb3b3f63dbfa7dcd6e1debe63051f326fa154
->>>>>>> 2df3818cd08a4e607f40a4c79d3d436e90ae459c

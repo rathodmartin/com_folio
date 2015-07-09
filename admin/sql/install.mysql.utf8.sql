@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `#__folio` (
 	`catid` int(11) NOT NULL DEFAULT '0',
 	`state` tinyint(11) NOT NULL DEFAULT '0',
 	`image` varchar(255) NOT NULL,
-	`company` varchar(250 NOT NULL DEFAULT '',
+	`company` varchar(250) NOT NULL DEFAULT '',
 	`phone` varchar(12) NOT NULL DEFAULT '',
 	`url` varchar(255) NOT NULL,
 	`description` TEXT,

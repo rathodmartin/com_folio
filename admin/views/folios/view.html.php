@@ -3,25 +3,13 @@ defined('_JEXEC') or die;
 
 class FolioViewFolios extends JViewLegacy
 {
-	protected $items;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	protected $state;
-=======
->>>>>>> 628eb3b3f63dbfa7dcd6e1debe63051f326fa154
->>>>>>> 2df3818cd08a4e607f40a4c79d3d436e90ae459c
+	protected $items ;
+	protected $state ;
 	
 	public function display($tpl = null)
 	{
-		$this->items	= $this->get('Items');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+		$this->items = $this->get('Items') ;
 		$this->state = $this->get('State') ;
-=======
->>>>>>> 628eb3b3f63dbfa7dcd6e1debe63051f326fa154
->>>>>>> 2df3818cd08a4e607f40a4c79d3d436e90ae459c
 		
 		if (count($errors = $this->get('Errors')))
 		{

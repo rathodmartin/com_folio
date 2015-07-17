@@ -35,9 +35,9 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			</thead>
 			<tbody>
 				<?php foreach ($this->items as $i => $item) :
-					$canCheckin = $user->authorize('core.manage',    'com_checkin') || 
+					$canCheckin = $user->authorise('core.manage',    'com_checkin') || 
 						$item->checked_out == $user->get('id') || $item->checked_out == 0;
-					$canChange = $user->authorize('core.edit.state', 'com_folio') && $canCheckin;
+					$canChange = $user->authorise('core.edit.state', 'com_folio') && $canCheckin;
 				?>
 				<tr class="row<?php echo $i % 2; ?>">
 					<td class="center hidden-phone">

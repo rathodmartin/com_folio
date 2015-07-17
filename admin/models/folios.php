@@ -34,7 +34,7 @@ class FolioModelFolios extends JModelList
 				$this->getState(
 						'list.select', 
 						'a.id, a.title,' .
-						'a.state, a.company' .
+						'a.state, a.company,' .
 						'a.publish_up, a.publish_down'
 				)
 		);

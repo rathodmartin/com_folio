@@ -5,6 +5,7 @@ class FolioViewFolios extends JViewLegacy
 {
 	protected $items ;
 	protected $state ;
+	
 	public function display($tpl = null)
 	{
 		$this->items = $this->get('Items') ;
